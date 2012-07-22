@@ -5,6 +5,9 @@ import org.mike.datatypes.Person.AGE
 import org.mike.datatypes.Person.FIRST_NAME
 import org.mike.datatypes.Person.LAST_NAME
 import org.mike.datatypes.Place
+import org.mike.datatypes.Place.COUNTRY
+import org.mike.datatypes.Place.PROVINCE
+
 
 object EnumTest {
   def main( args: Array[String] )
@@ -22,8 +25,8 @@ object EnumTest {
     lucy(FIRST_NAME) = "Lucy"
       
     val house = Place()  
-    house(Place.COUNTRY) = "Canada"
-    house(Place.PROVINCE) = "Quebec"
+    house(COUNTRY) = "Canada"
+    house(PROVINCE) = "Quebec"
       
     println(house(Place.COUNTRY))
     
