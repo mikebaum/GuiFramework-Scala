@@ -6,7 +6,7 @@ case class TypeTuple2[S,T0[S0]](val _1 : T0[S], val _2 : S) {
   override def toString = "(" + _1 + ", " + _2 + ")"
 }
 
-class ParameterList[P <: ParameterSet[P]] {
+class ParameterList[P <: ParameterSet] {
   
   type K[SO] = P#Val[SO]
   
@@ -29,7 +29,7 @@ class ParameterList[P <: ParameterSet[P]] {
 
 object ParameterList { 
 
-  def apply[P <: ParameterSet[P]] : ParameterList[P] = new ParameterList[P]
+  def apply[P <: ParameterSet] : ParameterList[P] = new ParameterList[P]
   
 //  def apply[P <: ParameterSet](elem : TypeTuple2[_, P#Val]) : ParameterList[P#Val] = 
 //    apply[P]().put(elem._1, elem._2)

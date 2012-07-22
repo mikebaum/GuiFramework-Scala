@@ -4,14 +4,13 @@ import org.mike.parameter.ParameterSet
 import org.mike.parameter.ParameterList
 
 
-abstract class Person extends ParameterSet[Person] {
+abstract class Person extends ParameterSet {
 	sealed trait Val[T] extends Parameter[T]
+	type PSET = Person
 }
 
 object Person extends Person { 
   case object FIRST_NAME extends Val[String]
   case object LAST_NAME extends Val[String]
   case object AGE extends Val[Int]
-  
-  def apply() : ParameterList[Person] = ParameterList[Person]
 }
