@@ -1,6 +1,6 @@
 package org.mike.parameter
 
-trait ParameterSet {
+trait ParameterSet[P <: ParameterSet[P]] {
   type Val[T] <: Parameter[T]
 
   protected trait Parameter[T] {
@@ -9,4 +9,6 @@ trait ParameterSet {
 
   private var _values = Set.empty[Val[_]]
   def values = _values
+  
+  def apply() : ParameterList[P]
 }
