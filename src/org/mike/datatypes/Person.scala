@@ -4,7 +4,7 @@ import org.mike.parameter.ParameterSet
 import org.mike.parameter.ParameterList
 
 
-abstract class Person extends ParameterSet {
+protected class Person extends ParameterSet {
 	sealed trait Val[T] extends Parameter[T]
 	type PSET = Person
 }

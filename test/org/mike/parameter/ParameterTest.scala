@@ -4,9 +4,8 @@ import org.mike.datatypes.Person
 import org.mike.datatypes.Person.AGE
 import org.mike.datatypes.Person.FIRST_NAME
 import org.mike.datatypes.Person.LAST_NAME
-import org.mike.datatypes.Place
-import org.mike.datatypes.Place.COUNTRY
-import org.mike.datatypes.Place.PROVINCE
+import org.mike.datatypes.Address
+import org.mike.datatypes.Address._
 
 
 object EnumTest {
@@ -24,11 +23,12 @@ object EnumTest {
     
     lucy(FIRST_NAME) = "Lucy"
       
-    val house = Place()  
+    val house = Address()  
     house(COUNTRY) = "Canada"
     house(PROVINCE) = "Quebec"
+    house(CITY) = "Notre-Dame-de-L'Ile-Perrot"
       
-    println(house(Place.COUNTRY))
+    println(house(Address.COUNTRY))
     
     format(Person.FIRST_NAME)
   }
