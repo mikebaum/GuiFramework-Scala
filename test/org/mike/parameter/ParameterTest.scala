@@ -13,7 +13,7 @@ object EnumTest {
   {
     val mike = Person()
     
-    mike(FIRST_NAME) = "mike" 
+    mike(FIRST_NAME) = "mike"
     mike(LAST_NAME) = "baum"
     mike(AGE) = 38
     

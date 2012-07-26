@@ -6,6 +6,7 @@ trait ParameterSet {
 
   protected trait Parameter[T] {
     self: Val[T] => _values += this
+    println( "added: " + this + " to " + ParameterSet.this )
   }
 
   private var _values = Set.empty[Val[_]]

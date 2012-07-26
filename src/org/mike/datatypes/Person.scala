@@ -1,7 +1,6 @@
 package org.mike.datatypes
 
 import org.mike.parameter.ParameterSet
-import org.mike.parameter.ParameterList
 
 
 protected class Person extends ParameterSet {
